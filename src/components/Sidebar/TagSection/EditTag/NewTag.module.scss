@@ -1,0 +1,16 @@
+.NewTag {
+  form {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .Error {
+      font-size: 14px;
+      color: red;
+      margin-top: 5px;
+      // flex-basis: 100px;
+    }
+  }
+}

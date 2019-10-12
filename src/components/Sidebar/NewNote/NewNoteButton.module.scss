@@ -1,0 +1,15 @@
+.NewNoteButton {
+  composes: ButtonBase from "../../Shared/ButtonStyles/ButtonBase.scss";
+
+  background: #20a2e0;
+  display: block;
+  font-size: 14px;
+  height: auto;
+  padding: 10px 20px;
+  margin: 20px auto;
+  color: white;
+  width: 131px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

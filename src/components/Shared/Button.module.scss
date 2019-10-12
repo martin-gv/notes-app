@@ -1,0 +1,21 @@
+@import "../../App.scss";
+
+.Button {
+  composes: ButtonBase from "./ButtonStyles/ButtonBase.scss";
+}
+
+.Default {
+  composes: Default from "./ButtonStyles/ButtonDefault.scss";
+}
+
+.Primary {
+  composes: Primary from "./ButtonStyles/ButtonPrimary.css";
+}
+
+.Cancel {
+  composes: Cancel from "./ButtonStyles/ButtonCancel.css";
+}
+
+.Danger {
+  composes: Danger from "./ButtonStyles/ButtonDanger.scss";
+}

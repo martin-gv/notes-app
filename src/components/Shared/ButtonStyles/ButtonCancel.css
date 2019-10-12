@@ -1,0 +1,13 @@
+.Cancel {
+  padding: 0;
+  color: grey;
+}
+
+.Cancel:hover,
+.Cancel:focus {
+  color: darken(grey, 50%);
+}
+
+.Cancel:active {
+  transform: none;
+}

@@ -1,0 +1,8 @@
+Token refresh in React
+Other option:
+Make sure to check for infinite loop condition if the 
+refresh token API gives a 401. You can maintain a counter 
+on every refresh token call. If the number exceeds, stop the 
+stream. Then do any error handling on it, for example showing a 
+message that there was an error, and logout the user.
+https://medium.freecodecamp.org/how-to-get-a-new-access-token-using-redux-observables-and-the-refresh-token-api-d38d875a8add

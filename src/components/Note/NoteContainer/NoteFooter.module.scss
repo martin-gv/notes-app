@@ -1,0 +1,35 @@
+.NoteFooter {
+  opacity: 0;
+  transition: opacity 100ms ease-out;
+
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.KeepFooterVisible {
+  opacity: 1;
+}
+
+.ButtonContainer {
+  display: inline-block;
+  -position: relative;
+  margin-left: 12px;
+}
+
+.Button {
+  color: #636363;
+  padding: 5px;
+}
+
+.Button:hover {
+  color: #888;
+}
+
+.InvertButtonColor {
+  color: #fff;
+}
+
+.MoveButtonsLeft {
+  justify-content: flex-start;
+}

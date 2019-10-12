@@ -1,0 +1,8 @@
+.ColorButton {
+  composes: Button from "../../NoteContainer/NoteFooter.module.scss";
+  font-size: 15px;
+}
+
+.IsFirstButton {
+  margin-left: 0;
+}

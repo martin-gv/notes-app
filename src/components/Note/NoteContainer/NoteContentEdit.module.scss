@@ -1,0 +1,54 @@
+@import "../../../App.scss";
+
+.NoteContentEdit {
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    font-family: $app-font;
+
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    transition: border 150ms ease-out;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  input {
+    height: 35px;
+    font-weight: 600;
+  }
+
+  textarea {
+    resize: none;
+    min-height: 200px;
+  }
+}
+
+.AddInputBorder {
+  input,
+  textarea {
+    border: 1px solid gainsboro;
+  }
+}
+
+.LightenInputBackground {
+  input,
+  textarea {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.InvertTextColor {
+  input,
+  textarea {
+    color: #fff;
+  }
+}

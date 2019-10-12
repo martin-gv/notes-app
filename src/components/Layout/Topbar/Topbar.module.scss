@@ -1,0 +1,25 @@
+@import "../../../App.scss";
+
+.Topbar {
+  height: $topbar-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  box-sizing: border-box;
+  padding: 10px 20px;
+
+  background-color: #394a71;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  color: white;
+
+  .LogoMenuGroup {
+    display: flex;
+    align-items: center;
+  }
+}

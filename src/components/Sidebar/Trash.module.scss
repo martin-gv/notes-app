@@ -1,0 +1,13 @@
+.Trash {
+  composes: TagListItem from "./TagSection/TagList/TagListItem.module.scss";
+  text-decoration: none;
+  color: #222;
+
+  svg {
+    color: #aaa;
+  }
+}
+
+.active {
+  composes: active from "./TagSection/TagList/TagListItem.module.scss";
+}

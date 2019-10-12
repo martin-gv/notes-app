@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.MobileMenu {
+  display: none;
+  margin-right: 10px;
+  padding: 10px;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .MobileMenu {
+    display: block;
+  }
+}

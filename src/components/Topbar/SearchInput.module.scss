@@ -1,0 +1,48 @@
+@import "../../App.scss";
+
+$placeholder-color: rgba(255, 255, 255, 0.5);
+
+.SearchInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 0 10px;
+  
+  input {
+    background: none;
+    outline: none;
+    border: 0;
+
+    background-color: #465780;
+    color: white;
+    border-bottom: 1px solid #506086;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    // max-width: 300px;
+    height: 35px;
+    padding: 5px 10px;
+    padding-left: 45px;
+    border-radius: 4px;
+  }
+
+  input::placeholder {
+    color: $placeholder-color;
+    user-select: none;
+  }
+
+  svg {
+    cursor: text;
+    position: absolute;
+    margin-left: 19px;
+    margin-top: 9px;
+    font-size: 14px;
+    color: $placeholder-color;
+  }
+}
+
+@media screen and (max-width: $topbar-extra-small) {
+  .SearchInput {
+    // order: 3;
+    // width: 100%;
+  }
+}

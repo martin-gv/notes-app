@@ -1,0 +1,18 @@
+.UserMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.MenuItem {
+  border-radius: 5px;
+  transition: background 150ms ease-out;
+}
+
+.MenuItem:hover {
+  background: #8cdaff;
+}
+
+.MenuItem:active {
+  background: #47ddff;
+}

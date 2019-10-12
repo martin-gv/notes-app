@@ -1,0 +1,23 @@
+@import "../../../App.scss";
+
+.ButtonBase {
+  border: none;
+  padding: 5px 10px;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+
+  /* App styles */
+  font-family: $app-font;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.ButtonBase:focus {
+  outline: none;
+}
+
+.ButtonBase:active {
+  transform: scale(0.98);
+  outline: none;
+}

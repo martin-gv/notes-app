@@ -1,0 +1,6 @@
+@import "../../../App.scss";
+
+.Main {
+  margin-top: $topbar-height;
+  min-height: calc(100vh - #{$topbar-height});
+}

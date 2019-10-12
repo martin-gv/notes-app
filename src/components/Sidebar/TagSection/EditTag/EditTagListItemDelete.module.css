@@ -1,0 +1,10 @@
+.EditTagListItemDelete {
+  color: #888;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.EditTagListItemDelete:hover {
+  color: #676767
+}

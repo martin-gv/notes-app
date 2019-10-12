@@ -1,0 +1,16 @@
+.Logo {
+  a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+
+    h1 {
+      padding-left: 10px;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+  }
+}

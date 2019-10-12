@@ -1,0 +1,13 @@
+$background-color: #da2445;
+
+.Danger {
+  background: $background-color;
+  color: #fff;
+  min-width: 90px;
+  height: 30px;
+}
+
+.Danger:hover,
+.Danger:focus {
+  background: lighten($background-color, 10%);
+}

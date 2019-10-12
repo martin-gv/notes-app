@@ -1,0 +1,20 @@
+$icon-size: 35px;
+
+.UserIcon {
+  cursor: pointer;
+  user-select: none;
+
+  background-color: #eee;
+  width: $icon-size;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: $icon-size;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}

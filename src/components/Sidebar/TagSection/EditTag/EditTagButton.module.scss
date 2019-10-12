@@ -1,0 +1,13 @@
+$color: #4392b7;
+
+.EditButtonTag {
+  composes: TagListItem from "../TagList/TagListItem.module.scss";
+
+  margin-top: 10px;
+  font-weight: bold;
+  color: $color;
+
+  svg {
+    color: $color;
+  }
+}

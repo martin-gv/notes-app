@@ -1,0 +1,11 @@
+.Primary {
+  background: #266cc5;
+  color: #fff;
+  min-width: 90px;
+  height: 30px;
+}
+
+.Primary:hover,
+.Primary:focus {
+  background: lighten(#266cc5, 10%);
+}

@@ -1,0 +1,38 @@
+@import "../../App.scss";
+
+.MasonryContainer {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  width: 24.25%;
+}
+
+.MasonryContainer:hover {
+  .ShowFooterOnHover {
+    opacity: 1;
+  }
+}
+
+// Order of media queries is important
+@media screen and (max-width: $breakpoint-large) {
+  .MasonryContainer {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .MasonryContainer {
+    width: 49.5%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .MasonryContainer {
+    width: 49.5%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-extra-small) {
+  .MasonryContainer {
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+.EditTagListItem {
+  height: 40px;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+
+  input {
+    border: 0;
+    box-sizing: border-box;
+    padding: 5px 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 200ms;
+  }
+
+  input:focus {
+    outline: 0;
+    border: 1px solid #5786c1;
+  }
+}
+
+.EditTagListItem:hover {
+  .ShowDeleteOnHover {
+    opacity: 1;
+  }
+}

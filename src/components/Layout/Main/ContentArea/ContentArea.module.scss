@@ -1,0 +1,13 @@
+@import "../../../../App.scss";
+
+.ContentArea {
+  margin-left: $sidebar-width;
+  padding: 0.5rem;
+  padding-top: 1.75rem;
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .ContentArea {
+    margin-left: 0;
+  }
+}

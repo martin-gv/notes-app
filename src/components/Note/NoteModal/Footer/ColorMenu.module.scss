@@ -1,0 +1,72 @@
+$wrapper-size: 37px;
+$circle-size: 28px;
+
+.ColorMenu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  padding: 5px;
+}
+
+.MenuItemWrapper {
+  display: inline-block;
+  padding: 0 !important;
+  width: $wrapper-size;
+  height: $wrapper-size;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MenuItemWrapper:hover {
+  background: #fff;
+}
+
+.ColorCircle {
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: $circle-size;
+  display: inline-block;
+  // border: 1px solid #fff;
+
+  // center checkmark
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    color: #555;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.ColorCircle:hover {
+  border: 1px solid #ccc;
+}
+
+.ColorCircleActive {
+  // border-color: #ccc;
+}
+
+.ColorCircleDark {
+  svg {
+    color: #eee;
+  }
+}
+
+.ColorCircleDark:hover {
+  border: 1px solid #3e3e3e;
+}
+
+.ColorCircleLight {
+  border: 1px solid #ccc;
+  width: $circle-size - 1px;
+  height: $circle-size - 1px;
+}
+
+.ColorCircleLight:hover {
+  width: $circle-size + 1px;
+  height: $circle-size + 1px;
+}

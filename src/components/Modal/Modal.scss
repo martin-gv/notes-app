@@ -1,0 +1,18 @@
+$scrollbar-width: 17px;
+
+body.modal-open {
+  overflow: hidden;
+}
+
+body.modal-open.scrollbar-is-visible {
+  padding-right: $scrollbar-width;
+}
+
+body.modal-open .Topbar-modal-open {
+  z-index: 1;
+}
+
+// Adjust for size of scrollbar + element's own right padding
+body.modal-open.scrollbar-is-visible .Topbar-modal-open {
+  padding-right: $scrollbar-width + 20px;
+}

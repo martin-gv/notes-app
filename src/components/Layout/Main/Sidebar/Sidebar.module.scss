@@ -1,0 +1,27 @@
+@import "../../../../App.scss";
+
+.Sidebar {
+  position: fixed;
+  width: $sidebar-width;
+  box-sizing: border-box;
+  padding: 15px 20px;
+
+  height: 100%;
+  max-height: calc(100vh - #{$topbar-height});
+  overflow-y: auto;
+
+  z-index: 1; // puts it above the note masonry layout so modal shows up correctly
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .Sidebar {
+    left: 0 - $sidebar-width;
+    transition: left 300ms ease-in-out;
+    background: white;
+  }
+}
+
+.ShowMobileMenu {
+  box-shadow: 1px 0 20px 0 #adadad;
+  left: 0;
+}

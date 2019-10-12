@@ -1,0 +1,30 @@
+.NewTagInput {
+  position: relative; // makes absolute positioning of children relative to parent
+  display: inline-block;
+
+  input {
+    border: 0;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    padding-left: 28px;
+    width: 190px;
+    margin-right: 8px;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 200ms;
+  }
+
+  input:focus {
+    outline: 0;
+    border: 1px solid #5786c1;
+  }
+
+  svg {
+    position: absolute;
+    color: #bbb;
+    top: 8px;
+    left: 10px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,4 @@
+.CopyButton {
+  composes: Button from "../../NoteContainer/NoteFooter.module.scss";
+  font-size: 15px;
+}

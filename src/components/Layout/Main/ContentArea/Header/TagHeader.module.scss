@@ -1,0 +1,23 @@
+.TagHeader {
+  .Title {
+    font-size: 22px;
+    margin-left: 6px;
+    margin-right: 14px;
+    margin-bottom: 20px;
+    color: #808080;
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 18px;
+      margin-right: 10px;
+      color: #aaa;
+    }
+  }
+
+  .Message {
+    margin-left: 6px;
+    font-size: 17px;
+    color: grey;
+  }
+}

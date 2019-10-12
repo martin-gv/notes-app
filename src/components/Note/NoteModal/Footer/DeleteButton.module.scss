@@ -1,0 +1,12 @@
+.DeleteButton {
+  composes: Button from "../../NoteContainer/NoteFooter.module.scss";
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.DeletePermanently:hover {
+  svg {
+    color: #ca0000;
+  }
+}

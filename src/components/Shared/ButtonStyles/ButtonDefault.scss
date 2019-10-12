@@ -1,0 +1,13 @@
+$button-background: #efefef;
+
+.Default {
+  background: $button-background;
+  color: #000;
+  min-width: 90px;
+  height: 30px;
+}
+
+.Default:hover,
+.Default:focus {
+  background: darken($button-background, 3%);
+}
