@@ -3,7 +3,7 @@ import styles from "./NewNoteButton.module.scss";
 
 import Button from "../../Shared/Button";
 
-function NewNoteButton({ onClick }) {
+function NewNoteButton({ onClick, hey, nope }) {
   return (
     <Button.Blank className={styles.NewNoteButton} onClick={onClick}>
       New Note

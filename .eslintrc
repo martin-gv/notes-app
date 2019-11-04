@@ -1,0 +1,61 @@
+// .eslintrc file overrides package.json settings
+
+// Create React App installs the ESLint package. Installing it with npm
+// may show an error in the terminal. Setting the ENV variable EXTEND_ESLINT
+// to true will prevent building of projects with errors (warnings are okay)
+
+// In "extends" make sure to add the "prettier" config after any other configs (e.g. "airbnb")
+// so it overrides them. If necessary, add any prettier/sub-configs (see below) last.
+
+// From docs for eslint-config-prettier:
+// If you extend a config which uses a plugin, it is recommended
+// to add "prettier/that-plugin" (if available).
+
+// Supported plugins used by eslint-config-react-app:
+// @typescript-eslint/eslint-plugin
+// eslint-plugin-flowtype
+// eslint-plugin-react (also used by eslint-config-airbnb)
+
+// Prettier should be installed with an exact version. From the docs:
+// We recommend pinning an exact version of prettier in your package.json
+// as we introduce stylistic changes in patch releases.
+
+// Recommended configuration for eslint-plugin-prettier:
+// Add "plugin:prettier/recommended" as the last extension. This will
+// 1) enable the plugin 2) set prettier/prettier rule to "error" and
+// 3) extend using eslint-config-prettier. Additional options can be set
+// inside a .prettierrc file. The extra plugin exclusions should be added
+// after the recommended configuration
+
+{
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
+
+// @TODO write note about built-in extension: TypeScript and JavaScript Language Features
+
+// Additional rules:
+// "react/prop-types": [1],
+// "react/require-default-props": [1],
+// "react/default-props-match-prop-types": [1],
+// "react/no-unused-prop-types": [1]
+
+// @TODO test this
+// extends: airbnb/hooks
+
+// @TODO
+// does a lint-staged pre-commit hook lint a file and exit if there are errors?
+// pre-commit hook: format with prettier -> lint -> commit
+// npm run build will show an error if lint checks are "error" ("warnings okay")
+
+// @TODO
+// test lint-staged with non-staged files with lint errors or formatting errors

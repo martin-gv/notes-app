@@ -4,7 +4,7 @@ $topbar-height: 60px;
 $sidebar-width: 250px;
 
 /* @TODO how do these breakpoints match up with mobile devices? especially phones */
-// Masonry breakpoints
+/* Masonry breakpoints */
 $breakpoint-large: 1175px;
 $breakpoint-medium: 950px;
 $breakpoint-small: 730px;
@@ -17,5 +17,5 @@ body {
   background: #eee;
 }
 
-// Topbar breakpoints
+/* Topbar breakpoints */
 $topbar-extra-small: 600px;

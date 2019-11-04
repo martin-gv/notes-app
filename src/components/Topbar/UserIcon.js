@@ -9,6 +9,4 @@ function UserIcon({ onClick, image }, ref) {
   );
 }
 
-UserIcon = React.forwardRef(UserIcon);
-
-export default UserIcon;
+export default React.forwardRef(UserIcon);

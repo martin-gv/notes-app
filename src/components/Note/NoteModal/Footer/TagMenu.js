@@ -1,5 +1,4 @@
 import React from "react";
-import uuid from "uuid/v4";
 import { useStoreState, useStoreActions } from "easy-peasy";
 
 import Menu from "../../../Menu/Menu";

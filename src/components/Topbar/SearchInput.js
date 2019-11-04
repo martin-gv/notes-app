@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import styles from "./SearchInput.module.scss";
 import { useStoreState, useStoreActions } from "easy-peasy";
 

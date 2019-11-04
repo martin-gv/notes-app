@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import styles from "./Note.module.scss";
 import classNames from "classnames";
 import { useStoreActions } from "easy-peasy";
 
+import styles from "./Note.module.scss";
 import NoteModal from "./NoteModal/NoteModal";
 import NoteContainer from "./NoteContainer/NoteContainer";
 import PermanentDeleteModal from "./NoteModal/PermanentDeleteModal";
+
+const x = "hey";
 
 function Note({ note }) {
   const [showModal, setShowModal] = useState(false);
