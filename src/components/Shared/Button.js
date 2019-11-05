@@ -1,11 +1,11 @@
-import React, { forwardRef } from "react";
-import styles from "./Button.module.scss";
+import React, { forwardRef } from 'react';
+import styles from './Button.module.scss';
 
 const TYPES = {
-  DEFAULT: "Default",
-  PRIMARY: "Primary",
-  CANCEL: "Cancel",
-  DANGER: "Danger"
+  DEFAULT: 'Default',
+  PRIMARY: 'Primary',
+  CANCEL: 'Cancel',
+  DANGER: 'Danger',
 };
 
 const ButtonGenerator = forwardRef(
@@ -14,7 +14,7 @@ const ButtonGenerator = forwardRef(
     if (type) css.push(styles[type]);
     if (className) css.push(className);
 
-    const joinedClasses = css.join(" ");
+    const joinedClasses = css.join(' ');
 
     return (
       <button
@@ -38,15 +38,15 @@ const Button = forwardRef((props, ref) => (
   <ButtonGenerator {...props} ref={ref} type={TYPES.DEFAULT}></ButtonGenerator>
 ));
 
-Button.Primary = props => (
+Button.Primary = (props) => (
   <ButtonGenerator {...props} type={TYPES.PRIMARY}></ButtonGenerator>
 );
 
-Button.Cancel = props => (
+Button.Cancel = (props) => (
   <ButtonGenerator {...props} type={TYPES.CANCEL}></ButtonGenerator>
 );
 
-Button.Danger = props => (
+Button.Danger = (props) => (
   <ButtonGenerator {...props} type={TYPES.DANGER}></ButtonGenerator>
 );
 

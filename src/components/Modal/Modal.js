@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import "./Modal.scss";
+import React, { useEffect } from 'react';
+import './Modal.scss';
 
-import ModalOverlay from "./ModalOverlay";
-import ModalContent from "./ModalContent";
+import ModalOverlay from './ModalOverlay';
+import ModalContent from './ModalContent';
 
-const MODAL_IS_OPEN_CLASS = "modal-open";
-const SCROLLBAR_IS_VISIBLE = "scrollbar-is-visible";
+const MODAL_IS_OPEN_CLASS = 'modal-open';
+const SCROLLBAR_IS_VISIBLE = 'scrollbar-is-visible';
 
 function Modal({ children, show, close, className, width, forceScrollLock }) {
-  const isTouchDevice = "ontouchstart" in window;
+  const isTouchDevice = 'ontouchstart' in window;
 
   useEffect(
     function() {

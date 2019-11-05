@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import styles from "./Menu.module.css";
-import classNames from "classnames";
+import React, { useState, useEffect, useRef } from 'react';
+import styles from './Menu.module.css';
+import classNames from 'classnames';
 
-import MenuItem from "./MenuItem";
+import MenuItem from './MenuItem';
 
 function Menu({ show, close, items, className, style, openedBy }) {
   // console.log("<Menu> - show: " + show);
@@ -31,7 +31,7 @@ function MenuContent({ close, items, className, style, openedBy }) {
   const [menuStyle, setMenuStyle] = useState({
     ...style,
     marginTop: margin,
-    opacity: 0
+    opacity: 0,
   });
 
   // Check rendered position of menu and adjust if required
@@ -41,7 +41,7 @@ function MenuContent({ close, items, className, style, openedBy }) {
         bottom,
         right,
         height,
-        width
+        width,
       } = menuRef.current.getBoundingClientRect();
       const spaceToBottom = document.documentElement.clientHeight - bottom;
       const spaceToRight = document.documentElement.clientWidth - right;
@@ -58,7 +58,7 @@ function MenuContent({ close, items, className, style, openedBy }) {
         styles.marginLeft = 0 - width - margin + openedByWidth;
       }
 
-      setMenuStyle(prev => ({ ...prev, opacity: 100, ...styles }));
+      setMenuStyle((prev) => ({ ...prev, opacity: 100, ...styles }));
     },
     [menuRef]
   );
@@ -68,7 +68,7 @@ function MenuContent({ close, items, className, style, openedBy }) {
       ref={menuRef}
       className={joinedClasses}
       style={menuStyle}
-      onClick={e => e.stopPropagation()}
+      onClick={(e) => e.stopPropagation()}
     >
       {items.map(function(item) {
         return <MenuItem {...item} />;
@@ -80,24 +80,24 @@ function MenuContent({ close, items, className, style, openedBy }) {
 function useOuterClick(innerRef, onOuterClick) {
   useEffect(
     function() {
-      console.log("useEffect - outer click");
+      console.log('useEffect - outer click');
       if (innerRef.current) {
-        console.log("useEffect - outer click - add event listener");
-        document.addEventListener("click", handleClick);
+        console.log('useEffect - outer click - add event listener');
+        document.addEventListener('click', handleClick);
 
         function handleClick(e) {
           if (innerRef.current && !innerRef.current.contains(e.target)) {
-            console.log("outer click", innerRef.current, e.target);
+            console.log('outer click', innerRef.current, e.target);
             onOuterClick();
           }
         }
 
         return function cleanup() {
-          console.log("cleanup - outer click");
-          document.removeEventListener("click", handleClick);
+          console.log('cleanup - outer click');
+          document.removeEventListener('click', handleClick);
         };
       } else {
-        console.log("useEffect - outer click - DO NOTHING");
+        console.log('useEffect - outer click - DO NOTHING');
       }
     },
     [onOuterClick, innerRef]
@@ -107,20 +107,20 @@ function useOuterClick(innerRef, onOuterClick) {
 function useWindowResize(show, onWindowResize) {
   useEffect(function() {
     if (show) {
-      console.log("useEffect - window resize - add event listener");
-      window.addEventListener("resize", handleResize);
+      console.log('useEffect - window resize - add event listener');
+      window.addEventListener('resize', handleResize);
 
       function handleResize() {
-        console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+        console.log('resized to: ', window.innerWidth, 'x', window.innerHeight);
         onWindowResize();
       }
 
       return function cleanup() {
-        console.log("cleanup - window resize");
-        window.removeEventListener("resize", handleResize);
+        console.log('cleanup - window resize');
+        window.removeEventListener('resize', handleResize);
       };
     } else {
-      console.log("useEffect - window resize - DO NOTHING");
+      console.log('useEffect - window resize - DO NOTHING');
     }
   });
 }

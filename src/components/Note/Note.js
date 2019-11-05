@@ -1,24 +1,22 @@
-import React, { useState } from "react";
-import classNames from "classnames";
-import { useStoreActions } from "easy-peasy";
+import React, { useState } from 'react';
+import classNames from 'classnames';
+import { useStoreActions } from 'easy-peasy';
 
-import styles from "./Note.module.scss";
-import NoteModal from "./NoteModal/NoteModal";
-import NoteContainer from "./NoteContainer/NoteContainer";
-import PermanentDeleteModal from "./NoteModal/PermanentDeleteModal";
-
-const x = "hey";
+import styles from './Note.module.scss';
+import NoteModal from './NoteModal/NoteModal';
+import NoteContainer from './NoteContainer/NoteContainer';
+import PermanentDeleteModal from './NoteModal/PermanentDeleteModal';
 
 function Note({ note }) {
   const [showModal, setShowModal] = useState(false);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
   const { remove, deletePermanently } = useStoreActions(
-    actions => actions.notes
+    (actions) => actions.notes
   );
 
   function toggleModal() {
-    setShowModal(prev => !prev);
+    setShowModal((prev) => !prev);
   }
 
   function deleteClickHandler(e) {
@@ -36,9 +34,9 @@ function Note({ note }) {
     setShowDeleteConfirmation(false);
   }
 
-  const joinedClasses = classNames(styles.MasonryContainer, "masonry-item");
+  const joinedClasses = classNames(styles.MasonryContainer, 'masonry-item');
 
-  const isTouchDevice = "ontouchstart" in window;
+  const isTouchDevice = 'ontouchstart' in window;
 
   return (
     <>

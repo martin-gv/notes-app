@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 
-import UserIcon from "./UserIcon";
-import UserMenu from "./UserMenu";
-import images from "./UserIconImages/images";
+import UserIcon from './UserIcon';
+import UserMenu from './UserMenu';
+import images from './UserIconImages/images';
 
 function User() {
   const iconRef = useRef(null);
@@ -13,7 +13,7 @@ function User() {
 
   function handleClick() {
     // e.stopPropagation() not needed because setShow unmounts <MenuContent> cleaning up the click listeners
-    setShow(prev => !prev);
+    setShow((prev) => !prev);
   }
 
   function handleIconChange(image) {

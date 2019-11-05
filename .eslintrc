@@ -30,21 +30,25 @@
 {
   "extends": [
     "react-app",
-    "airbnb",
-    "plugin:prettier/recommended",
+    // "airbnb",
+    "prettier",
     "prettier/@typescript-eslint",
     "prettier/flowtype",
     "prettier/react"
   ],
+  "plugins": ["prettier"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "prettier/prettier": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": [1]
   }
 }
 
 // @TODO write note about built-in extension: TypeScript and JavaScript Language Features
 
 // Additional rules:
-// "react/prop-types": [1],
+// Change from default 2 in eslint-plugin-react react/prop-types
+
 // "react/require-default-props": [1],
 // "react/default-props-match-prop-types": [1],
 // "react/no-unused-prop-types": [1]
@@ -59,3 +63,7 @@
 
 // @TODO
 // test lint-staged with non-staged files with lint errors or formatting errors
+
+// @TODO test line endings. create crlf file and try committing
+
+// @TODO set up git pull so lf remains lf (not converted to crlf on windows)

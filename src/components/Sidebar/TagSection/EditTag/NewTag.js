@@ -1,27 +1,29 @@
-import React, { useState } from "react";
-import styles from "./NewTag.module.scss";
-import { useStoreActions } from "easy-peasy";
+import React, { useState } from 'react';
+import styles from './NewTag.module.scss';
+import { useStoreActions } from 'easy-peasy';
 
-import NewTagInput from "./NewTagInput";
-import NewTagSaveButton from "./NewTagSaveButton";
+import NewTagInput from './NewTagInput';
+import NewTagSaveButton from './NewTagSaveButton';
 
 function NewTag({ tags }) {
-  const [tag, setTag] = useState("");
-  const createTag = useStoreActions(actions => actions.tags.createTag);
+  const [tag, setTag] = useState('');
+  const createTag = useStoreActions((actions) => actions.tags.createTag);
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   function handleNewTag(e) {
     e.preventDefault();
 
-    if (tag === "") {
+    if (tag === '') {
       // Do nothing
-    } else if (tags.find(el => el.label.toLowerCase() === tag.toLowerCase())) {
+    } else if (
+      tags.find((el) => el.label.toLowerCase() === tag.toLowerCase())
+    ) {
       setError("There's already a tag with that name");
     } else {
       createTag(tag);
-      setError("");
-      setTag("");
+      setError('');
+      setTag('');
     }
   }
 
