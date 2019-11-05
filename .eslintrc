@@ -30,7 +30,7 @@
 {
   "extends": [
     "react-app",
-    // "airbnb",
+    "airbnb",
     "prettier",
     "prettier/@typescript-eslint",
     "prettier/flowtype",
@@ -39,11 +39,28 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": [1]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
 }
 
+// idea
+// dev: minimal rules, extend react-app and add minor rules for proptypes etc.
+//      no prettier warnings in code editor
+//      perhaps even remove eslint warnings on editor too (only show in terminal/console)
+
+// commit: run through eslint airbnb, auto-fix prettier (except for semicolons)
+// still need to block commits if eslint warnings are present (from react-app)
+
+// lint-staged won't exit on prettier warns or errors, but will fix them
+// setting prettier to error will prevent building during development
+
+
+
+// npm run build config for prettier "error"
+// npm run start config for prettier "warn"
+// lint-staged config prettier --write
+
+// "react/prop-types": [1]
 // @TODO write note about built-in extension: TypeScript and JavaScript Language Features
 
 // Additional rules:
