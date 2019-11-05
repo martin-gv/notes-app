@@ -58,8 +58,9 @@ function Note({ note }) {
         forceScrollLock={showModal || showDeleteConfirmation}
       />
       <div className={joinedClasses}>
-        {/* <NoteContainer> is reused in other locations. The props isNewNote and isModalOpen handle
-        the different behaviour depending context */}
+        {/* <NoteContainer> is reused in other locations.
+        The props isNewNote and isModalOpen handle
+        different behaviour depending context */}
         <NoteContainer
           note={note}
           onClick={toggleModal}
