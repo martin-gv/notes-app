@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/components/Note/Note.js"
   },
   "eslintConfig": {
     "extends": [
@@ -44,7 +45,8 @@
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "prop-types": "^15.7.2"
   },
   "husky": {
     "hooks": {
@@ -52,10 +54,6 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint",
-    "*.{js,json,css,scss,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": "eslint"
   }
 }

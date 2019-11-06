@@ -43,18 +43,26 @@
   }
 }
 
-// idea
-// dev: minimal rules, extend react-app and add minor rules for proptypes etc.
-//      no prettier warnings in code editor
-//      perhaps even remove eslint warnings on editor too (only show in terminal/console)
+// ideas
 
-// commit: run through eslint airbnb, auto-fix prettier (except for semicolons)
-// still need to block commits if eslint warnings are present (from react-app)
+// 1)
+// dev: only eslint rules: react-app, airbnb, additional rules
+// commit: run through eslint, prettier check
+
+// 2)
+// npm script: check eslint and prettier on commited files
+
+// 3)
+// only run manual eslint check, set up prettier as eslint rules
+
+// 4)
+// eslint extends rules are only for use in npm script, manual linting before committing
+// do not set environment variable, so create-react-app does not use this
+
+
 
 // lint-staged won't exit on prettier warns or errors, but will fix them
 // setting prettier to error will prevent building during development
-
-
 
 // npm run build config for prettier "error"
 // npm run start config for prettier "warn"
@@ -72,14 +80,6 @@
 
 // @TODO test this
 // extends: airbnb/hooks
-
-// @TODO
-// does a lint-staged pre-commit hook lint a file and exit if there are errors?
-// pre-commit hook: format with prettier -> lint -> commit
-// npm run build will show an error if lint checks are "error" ("warnings okay")
-
-// @TODO
-// test lint-staged with non-staged files with lint errors or formatting errors
 
 // @TODO test line endings. create crlf file and try committing
 
