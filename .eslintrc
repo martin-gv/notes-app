@@ -20,7 +20,7 @@
 // We recommend pinning an exact version of prettier in your package.json
 // as we introduce stylistic changes in patch releases.
 
-// Recommended configuration for eslint-plugin-prettier:
+// Recommended configuration for:
 // Add "plugin:prettier/recommended" as the last extension. This will
 // 1) enable the plugin 2) set prettier/prettier rule to "error" and
 // 3) extend using eslint-config-prettier. Additional options can be set
@@ -36,12 +36,20 @@
     "prettier/flowtype",
     "prettier/react"
   ],
-  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "linebreak-style": ["error", "unix"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
   }
 }
+
+// Rules in .prettierrc change Prettier defaults to Airbnb JS styleguide
+// Prettier config removes all rules handled by Prettier from ESLint
+// No plugin required to show Prettier errors as ESLint errors because this can 
+// be checked at commit and build for production. 
+
+// npm script for linting (both style and JS)
+// pre-commit hook to prevent committing without passing lint tests
+
 
 // ideas
 
@@ -52,21 +60,11 @@
 // 2)
 // npm script: check eslint and prettier on commited files
 
-// 3)
-// only run manual eslint check, set up prettier as eslint rules
+// 3) environment variable not set to allow building during development
 
-// 4)
-// eslint extends rules are only for use in npm script, manual linting before committing
-// do not set environment variable, so create-react-app does not use this
+// 4) prettier can format during development
+//    eslint errors show up in editor and problems pane (do not show in terminal or console)
 
-
-
-// lint-staged won't exit on prettier warns or errors, but will fix them
-// setting prettier to error will prevent building during development
-
-// npm run build config for prettier "error"
-// npm run start config for prettier "warn"
-// lint-staged config prettier --write
 
 // "react/prop-types": [1]
 // @TODO write note about built-in extension: TypeScript and JavaScript Language Features
