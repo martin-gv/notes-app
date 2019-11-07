@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { useStoreActions } from 'easy-peasy';
 
@@ -19,7 +20,7 @@ function Note({ note }) {
     setShowModal((prev) => !prev);
   }
 
-  function deleteClickHandler(e) {
+  function deleteClickHandler(e)    {
     e.stopPropagation();
 
     if (!note.isDeleted) {
@@ -74,5 +75,16 @@ function Note({ note }) {
     </>
   );
 }
+
+Note.propTypes = {
+  note: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    content: PropTypes.string,
+    tags: PropTypes.any,
+    color: PropTypes.string,
+    isDeleted: PropTypes.bool,
+  }).isRequired,
+};
 
 export default Note;
