@@ -47,11 +47,7 @@
     "prettier": "1.19.1",
     "prop-types": "^15.7.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "lint-staged": {
     "*.{js,json,css,scss,md}": "prettier --check",
     "*.js": "eslint"
