@@ -1,16 +1,16 @@
-import React from "react";
-import styles from "./AllNotes.module.scss";
-import { NavLink } from "react-router-dom";
-import { useStoreActions } from "easy-peasy";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useStoreActions } from 'easy-peasy';
 
-import useCloseMobileMenu from "../../hooks/useCloseMobileMenu";
+import styles from './AllNotes.module.scss';
+import useCloseMobileMenu from '../../hooks/useCloseMobileMenu';
 
 function AllNotes() {
-  const setSearch = useStoreActions(actions => actions.setSearch);
+  const setSearch = useStoreActions((actions) => actions.setSearch);
   const closeMobileMenu = useCloseMobileMenu();
 
   function handleClick() {
-    setSearch("");
+    setSearch('');
     closeMobileMenu();
   }
 
@@ -22,7 +22,7 @@ function AllNotes() {
       exact
       onClick={handleClick}
     >
-      <i className="fas fa-sticky-note"></i>
+      <i className="fas fa-sticky-note" />
       All notes
     </NavLink>
   );

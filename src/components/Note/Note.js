@@ -13,14 +13,14 @@ function Note({ note }) {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
   const { remove, deletePermanently } = useStoreActions(
-    (actions) => actions.notes
+    (actions) => actions.notes,
   );
 
   function toggleModal() {
     setShowModal((prev) => !prev);
   }
 
-  function deleteClickHandler(e)    {
+  function deleteClickHandler(e) {
     e.stopPropagation();
 
     if (!note.isDeleted) {
@@ -46,6 +46,7 @@ function Note({ note }) {
       <NoteModal
         show={showModal}
         close={toggleModal}
+        F
         note={note}
         deleteClick={deleteClickHandler}
         forceScrollLock={showModal || showDeleteConfirmation}
@@ -59,9 +60,8 @@ function Note({ note }) {
         forceScrollLock={showModal || showDeleteConfirmation}
       />
       <div className={joinedClasses}>
-        {/* <NoteContainer> is reused in other locations.
-        The props isNewNote and isModalOpen handle
-        different behaviour depending context */}
+        {/* <NoteContainer> is reused in other locations. The props isNewNote
+        and isModalOpen handle different behaviour depending context */}
         <NoteContainer
           note={note}
           onClick={toggleModal}

@@ -1,32 +1,3 @@
-// .eslintrc file overrides package.json settings
-
-// Create React App installs the ESLint package. Installing it with npm
-// may show an error in the terminal. Setting the ENV variable EXTEND_ESLINT
-// to true will prevent building of projects with errors (warnings are okay)
-
-// In "extends" make sure to add the "prettier" config after any other configs (e.g. "airbnb")
-// so it overrides them. If necessary, add any prettier/sub-configs (see below) last.
-
-// From docs for eslint-config-prettier:
-// If you extend a config which uses a plugin, it is recommended
-// to add "prettier/that-plugin" (if available).
-
-// Supported plugins used by eslint-config-react-app:
-// @typescript-eslint/eslint-plugin
-// eslint-plugin-flowtype
-// eslint-plugin-react (also used by eslint-config-airbnb)
-
-// Prettier should be installed with an exact version. From the docs:
-// We recommend pinning an exact version of prettier in your package.json
-// as we introduce stylistic changes in patch releases.
-
-// Recommended configuration for:
-// Add "plugin:prettier/recommended" as the last extension. This will
-// 1) enable the plugin 2) set prettier/prettier rule to "error" and
-// 3) extend using eslint-config-prettier. Additional options can be set
-// inside a .prettierrc file. The extra plugin exclusions should be added
-// after the recommended configuration
-
 {
   "extends": [
     "react-app",
@@ -38,47 +9,6 @@
   ],
   "rules": {
     "linebreak-style": ["error", "unix"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
   }
 }
-
-// Rules in .prettierrc change Prettier defaults to Airbnb JS styleguide
-// Prettier config removes all rules handled by Prettier from ESLint
-// No plugin required to show Prettier errors as ESLint errors because this can 
-// be checked at commit and build for production. 
-
-// npm script for linting (both style and JS)
-// pre-commit hook to prevent committing without passing lint tests
-
-
-// ideas
-
-// 1)
-// dev: only eslint rules: react-app, airbnb, additional rules
-// commit: run through eslint, prettier check
-
-// 2)
-// npm script: check eslint and prettier on commited files
-
-// 3) environment variable not set to allow building during development
-
-// 4) prettier can format during development
-//    eslint errors show up in editor and problems pane (do not show in terminal or console)
-
-
-// "react/prop-types": [1]
-// @TODO write note about built-in extension: TypeScript and JavaScript Language Features
-
-// Additional rules:
-// Change from default 2 in eslint-plugin-react react/prop-types
-
-// "react/require-default-props": [1],
-// "react/default-props-match-prop-types": [1],
-// "react/no-unused-prop-types": [1]
-
-// @TODO test this
-// extends: airbnb/hooks
-
-// @TODO test line endings. create crlf file and try committing
-
-// @TODO set up git pull so lf remains lf (not converted to crlf on windows)

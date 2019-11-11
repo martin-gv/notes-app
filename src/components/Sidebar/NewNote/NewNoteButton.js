@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./NewNoteButton.module.scss";
+import React from 'react';
+import styles from './NewNoteButton.module.scss';
 
-import Button from "../../Shared/Button";
+import Button from '../../Shared/Button';
 
 function NewNoteButton({ onClick, hey, nope }) {
   return (

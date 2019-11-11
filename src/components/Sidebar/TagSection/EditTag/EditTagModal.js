@@ -1,15 +1,15 @@
-import React from "react";
-import styles from "./EditTagModal.module.scss";
-import { useStoreState } from "easy-peasy";
+import React from 'react';
+import { useStoreState } from 'easy-peasy';
 
-import Modal from "../../../Modal/Modal";
-import NewTag from "./NewTag";
-import EditTagList from "./EditTagList";
-import Divider from "../../../Shared/Divider";
-import CloseButton from "./EditTagModalCloseButton";
+import styles from './EditTagModal.module.scss';
+import Modal from '../../../Modal/Modal';
+import NewTag from './NewTag';
+import EditTagList from './EditTagList';
+import Divider from '../../../Shared/Divider';
+import CloseButton from './EditTagModalCloseButton';
 
 function NewTagModal({ show, close }) {
-  const tags = useStoreState(state => state.tags.tags);
+  const tags = useStoreState((state) => state.tags.tags);
 
   return (
     <Modal
