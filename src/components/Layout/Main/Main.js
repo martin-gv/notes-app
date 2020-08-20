@@ -1,8 +1,10 @@
-import React from "react";
-import styles from "./Main.module.scss";
+import React from 'react';
+import { useStoreState } from 'easy-peasy';
+import styles from './Main.module.scss';
 
-import Sidebar from "./Sidebar/Sidebar";
-import ContentArea from "./ContentArea/ContentArea";
+import NoteModal from '../../Note/NoteModal/NoteModal';
+import Sidebar from './Sidebar/Sidebar';
+import ContentArea from './ContentArea/ContentArea';
 
 function Main() {
   return (
@@ -14,4 +16,3 @@ function Main() {
 }
 
 export default Main;
-  
