@@ -4,9 +4,6 @@
   margin-left: $sidebar-width;
   padding: 0.5rem;
   padding-top: 1.75rem;
-  // Testing z-index and position
-  z-index: 0;
-  position: relative;
 }
 
 @media screen and (max-width: $breakpoint-small) {
