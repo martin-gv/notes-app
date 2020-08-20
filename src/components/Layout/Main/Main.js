@@ -6,6 +6,7 @@ import styles from './Main.module.scss';
 import NoteModal from '../../Note/NoteModal/NoteModal';
 import Sidebar from './Sidebar/Sidebar';
 import ContentArea from './ContentArea/ContentArea';
+import useCloseMobileMenu from '../../../hooks/useCloseMobileMenu';
 
 function Main() {
   // Local state for <NoteModal />
@@ -17,15 +18,12 @@ function Main() {
   // Get all notes from the store
   const notes = useStoreState((state) => state.notes.notes);
 
-  console.log(notes);
-
   // Delete new note from the store
   const removeNote = useStoreActions((actions) => actions.notes.remove);
   function deleteClickHandler(e) {
     e.stopPropagation();
-    console.log(notes[0].id);
-    const newNoteId = notes[0].id;
     removeNote(newNoteId);
+    setShowNewNoteModal(false);
   }
 
   // Create new note
@@ -36,8 +34,9 @@ function Main() {
   // 'Search' action from the store
   const setSearch = useStoreActions((actions) => actions.setSearch);
 
-  // Include useHistory hook
+  // Additional hooks
   const history = useHistory();
+  const closeMobileMenu = useCloseMobileMenu();
 
   // Show modal when clicking the "New Note" button
   function toggleModal() {
@@ -45,7 +44,7 @@ function Main() {
     setShowNewNoteModal((prev) => !prev);
     setSearch(''); // reset search
     history.push('/'); // go to main screen
-    // closeMobileMenu();
+    closeMobileMenu();
   }
 
   // If toggleModal has triggered and set 'showNewNoteModal' to true, then look
