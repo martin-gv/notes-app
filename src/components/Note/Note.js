@@ -46,7 +46,6 @@ function Note({ note }) {
       <NoteModal
         show={showModal}
         close={toggleModal}
-        F
         note={note}
         deleteClick={deleteClickHandler}
         forceScrollLock={showModal || showDeleteConfirmation}
