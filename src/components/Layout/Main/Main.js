@@ -7,8 +7,14 @@ import Sidebar from './Sidebar/Sidebar';
 import ContentArea from './ContentArea/ContentArea';
 
 function Main() {
+  // Get all notes from the store
+  const notes = useStoreState((state) => state.notes.notes);
+
+  console.log(notes);
+
   return (
     <div className={styles.Main}>
+      <NoteModal show={notes[0] && true} note={notes[0]} />
       <Sidebar />
       <ContentArea />
     </div>

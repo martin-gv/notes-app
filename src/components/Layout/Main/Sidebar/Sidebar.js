@@ -13,8 +13,8 @@ import Trash from '../../../Sidebar/Trash';
 function Sidebar() {
   const isMobileMenuOpen = useStoreState((state) => state.isMobileMenuOpen);
 
-  // Get all notes from the store
-  const notes = useStoreState((state) => state.notes.notes);
+  // // Get all notes from the store
+  // const notes = useStoreState((state) => state.notes.notes);
 
   const joinedClasses = cx(
     styles.Sidebar,
@@ -24,7 +24,7 @@ function Sidebar() {
   return (
     <div className={joinedClasses}>
       <NewNote />
-      <NoteModal show={notes[0] && true} note={notes[0]} />
+      {/* <NoteModal show={notes[0] && true} note={notes[0]} /> */}
       <Divider />
       <AllNotes />
       <Divider />
