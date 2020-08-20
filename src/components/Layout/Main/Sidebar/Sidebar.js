@@ -10,11 +10,8 @@ import NoteModal from '../../../Note/NoteModal/NoteModal';
 import TagSection from '../../../Sidebar/TagSection';
 import Trash from '../../../Sidebar/Trash';
 
-function Sidebar() {
+function Sidebar({ toggleModal }) {
   const isMobileMenuOpen = useStoreState((state) => state.isMobileMenuOpen);
-
-  // // Get all notes from the store
-  // const notes = useStoreState((state) => state.notes.notes);
 
   const joinedClasses = cx(
     styles.Sidebar,
@@ -23,8 +20,7 @@ function Sidebar() {
 
   return (
     <div className={joinedClasses}>
-      <NewNote />
-      {/* <NoteModal show={notes[0] && true} note={notes[0]} /> */}
+      <NewNote toggleModal={toggleModal} />
       <Divider />
       <AllNotes />
       <Divider />

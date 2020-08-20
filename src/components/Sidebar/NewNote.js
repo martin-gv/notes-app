@@ -6,11 +6,11 @@ import NewNoteButton from './NewNote/NewNoteButton';
 import NoteModal from '../Note/NoteModal/NoteModal';
 import useCloseMobileMenu from '../../hooks/useCloseMobileMenu';
 
-function NewNote() {
+function NewNote({ toggleModal }) {
   const [show, setShow] = useState(false);
 
   const createNewNote = useStoreActions(
-    (actions) => actions.notes.createNewNote
+    (actions) => actions.notes.createNewNote,
   );
   const notes = useStoreState((state) => state.notes.notes);
   const [newNoteId, setNewNoteId] = useState(null);
@@ -20,13 +20,13 @@ function NewNote() {
   const setSearch = useStoreActions((actions) => actions.setSearch);
   const closeMobileMenu = useCloseMobileMenu();
 
-  function toggleModal() {
-    createNewNote();
-    setShow((prev) => !prev);
-    setSearch('');
-    history.push('/');
-    closeMobileMenu();
-  }
+  // function toggleModal() {
+  //   createNewNote();
+  //   setShow((prev) => !prev);
+  //   setSearch('');
+  //   history.push('/');
+  //   closeMobileMenu();
+  // }
 
   const removeNote = useStoreActions((actions) => actions.notes.remove);
   function deleteClickHandler(e) {
