@@ -6,11 +6,10 @@ import cx from 'classnames';
 import Divider from '../../../Shared/Divider';
 import AllNotes from '../../../Sidebar/AllNotes';
 import NewNote from '../../../Sidebar/NewNote';
-import NoteModal from '../../../Note/NoteModal/NoteModal';
 import TagSection from '../../../Sidebar/TagSection';
 import Trash from '../../../Sidebar/Trash';
 
-function Sidebar({ toggleModal }) {
+function Sidebar({ toggleModal, setShowNewTagModal }) {
   const isMobileMenuOpen = useStoreState((state) => state.isMobileMenuOpen);
 
   const joinedClasses = cx(
@@ -24,7 +23,7 @@ function Sidebar({ toggleModal }) {
       <Divider />
       <AllNotes />
       <Divider />
-      <TagSection />
+      <TagSection setShowNewTagModal={setShowNewTagModal} />
       <Divider />
       <Trash />
     </div>

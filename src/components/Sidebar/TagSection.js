@@ -4,12 +4,12 @@ import TagHeader from './TagSection/TagHeader';
 import TagList from './TagSection/TagList/TagList';
 import EditTag from './TagSection/EditTag/EditTag';
 
-function TagSection() {
+function TagSection({ setShowNewTagModal }) {
   return (
     <>
       <TagHeader />
       <TagList />
-      <EditTag />
+      <EditTag setShowNewTagModal={setShowNewTagModal} />
     </>
   );
 }

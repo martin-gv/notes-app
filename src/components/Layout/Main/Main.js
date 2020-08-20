@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import styles from './Main.module.scss';
 
 import NoteModal from '../../Note/NoteModal/NoteModal';
+import EditTagModal from '../../Sidebar/TagSection/EditTag/EditTagModal';
 import Sidebar from './Sidebar/Sidebar';
 import ContentArea from './ContentArea/ContentArea';
 import useCloseMobileMenu from '../../../hooks/useCloseMobileMenu';
@@ -58,6 +59,12 @@ function Main() {
     ? notes.find((note) => note.id === newNoteId)
     : null;
 
+  /**
+   * New tag modal is handled at this level so that it shows up
+   * on top of all other content on iOS
+   */
+  const [showNewTagModal, setShowNewTagModal] = useState(false);
+
   return (
     <div className={styles.Main}>
       {/* New Note Modal */}
@@ -68,7 +75,14 @@ function Main() {
         isNewNote={true}
         deleteClick={deleteClickHandler}
       />
-      <Sidebar toggleModal={toggleModal} />
+      <EditTagModal
+        show={showNewTagModal}
+        close={() => setShowNewTagModal(false)}
+      />
+      <Sidebar
+        toggleModal={toggleModal}
+        setShowNewTagModal={setShowNewTagModal}
+      />
       <ContentArea />
     </div>
   );
