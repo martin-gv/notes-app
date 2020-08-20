@@ -43,7 +43,7 @@ function NewNote() {
     : null;
 
   return (
-    <div>
+    <>
       <NewNoteButton onClick={toggleModal} />
       <NoteModal
         show={show}
@@ -52,7 +52,7 @@ function NewNote() {
         isNewNote={true}
         deleteClick={deleteClickHandler}
       />
-    </div>
+    </>
   );
 }
 
