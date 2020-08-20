@@ -36,7 +36,7 @@ function NewNote() {
 
   useEffect(() => {
     if (show) setNewNoteId(notes[0].id);
-  }, [show]);
+  }, [show, notes]);
 
   const newNote = newNoteId
     ? notes.find((note) => note.id === newNoteId)
