@@ -1,0 +1,6 @@
+[build]
+  # build output folder 
+  publish = "build/"
+
+  # build command for Netlify
+  command = "npm run netlify-build"
