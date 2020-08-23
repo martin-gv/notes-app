@@ -1,6 +1,6 @@
 [build]
-  # build output folder 
+  # Build script output folder
   publish = "build/"
 
-  # build command for Netlify
-  command = "npm run netlify-build"
+  # ESLint can't throw any warnings or Netlify will abort the build.
+  # The 'netlify-build' script will allow building on Netlify, even with warnings
