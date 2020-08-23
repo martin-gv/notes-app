@@ -20,16 +20,20 @@ const masonryOptions = {
 const masonryStyles = { maxWidth: 1000, margin: 'auto' };
 
 function ContentArea() {
+  // Action and state
+  const { reset } = useStoreActions((actions) => actions.notes);
   const notes = useStoreState((state) => state.notes.notes);
   const search = useStoreState((state) => state.search);
-
-  const trashMatch = useRouteMatch('/trash');
-  const tagMatch = useRouteMatch('/tag/:id');
   const tags = useStoreState((state) => state.tags.tags);
 
-  const { reset } = useStoreActions((actions) => actions.notes);
-  useEffect(function() {
+  // Route matches
+  const trashMatch = useRouteMatch('/trash');
+  const tagMatch = useRouteMatch('/tag/:id');
+
+  // Reset notes on component mount
+  useEffect(() => {
     reset();
+    // eslint-disable-next-line
   }, []);
 
   const handleClick = useCloseMobileMenu();

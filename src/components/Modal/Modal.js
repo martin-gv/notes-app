@@ -27,7 +27,7 @@ function Modal({ children, show, close, className, width, forceScrollLock }) {
         document.body.classList.remove(SCROLLBAR_IS_VISIBLE);
       }
     },
-    [show]
+    [show, forceScrollLock, isTouchDevice]
   );
 
   if (!show) return null;

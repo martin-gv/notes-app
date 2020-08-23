@@ -60,7 +60,7 @@ function MenuContent({ close, items, className, style, openedBy }) {
 
       setMenuStyle((prev) => ({ ...prev, opacity: 100, ...styles }));
     },
-    [menuRef]
+    [menuRef, openedBy]
   );
 
   return (
